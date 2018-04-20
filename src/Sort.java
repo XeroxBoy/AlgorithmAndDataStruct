@@ -1,4 +1,5 @@
 public class Sort {
+    static int times=0;
     public static void swap(int[] a,int i,int j){
         int temp=a[i];
         a[i]=a[j];
@@ -26,6 +27,12 @@ public class Sort {
             swap(a,i,j);
         }
         swap(a,low,j);
+        System.out.println("第"+ ++times+"次快速排序结果");
+        for(int m=0;m<a.length;m++){
+
+            System.out.print(a[m]+" ");
+        }
+        System.out.println();
         return j;
     }
     public static void bubbleSort(int []a,int low,int high){
