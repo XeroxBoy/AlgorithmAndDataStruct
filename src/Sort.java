@@ -5,6 +5,17 @@ public class Sort {
         a[i]=a[j];
         a[j]=temp;
     }
+    public static int erFenSearch(int [] a,int target){
+        int low=0;
+        int high=a.length-1;
+        while(high>=low){
+            int middle=(low+high)/2;
+            if(a[middle]==target) return middle;
+            if(a[middle]>target) high=middle-1;
+            else low=middle+1;
+        }
+        return -1;
+    }
 
     public static void quickSort(int[] a,int low,int high){
         if(low>=high) return;
