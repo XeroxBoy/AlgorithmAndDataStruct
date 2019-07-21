@@ -1,4 +1,5 @@
-import java.math.BigInteger;
+package Algorithm;
+
 import java.util.Scanner;
 
 public class Smath {

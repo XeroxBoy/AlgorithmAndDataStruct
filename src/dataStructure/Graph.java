@@ -1,3 +1,5 @@
+package dataStructure;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -46,7 +48,7 @@ public class Graph {
     void BFSTraverse() {
         flag = new boolean[number];
         Queue<Integer> queue
-        =new LinkedList<Integer>();
+                =new LinkedList<Integer>();
         for (int i = 0; i < number; i++) {
             if (flag[i] == false) {
                 flag[i] = true;

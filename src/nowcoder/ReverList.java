@@ -1,9 +1,13 @@
+package nowcoder;
+
 import java.util.Stack;
-public class HelloWorld {
+
+public class ReverList {
     public static class ListNode {
         int val;
         ListNode next = null;
     }
+
     public static void main(String []args) {
         ListNode head=new ListNode();
         head.val=1;
@@ -19,6 +23,7 @@ public class HelloWorld {
             result=result.next;
         }
     }
+
     public static ListNode ReverseList(ListNode head) {
         Stack<ListNode> stack=new Stack();
         if(head==null) return null;
@@ -34,11 +39,11 @@ public class HelloWorld {
         while(!stack.isEmpty()){
             newHead.next=stack.pop();
             newHead=newHead.next;
-       //     System.out.print(newHead.val+" ");
+            //     System.out.print(newHead.val+" ");
         }
         //newHead.next=null;
         return null;
-       // return resultHead;
+        // return resultHead;
     }
 
 }

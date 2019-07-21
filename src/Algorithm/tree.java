@@ -1,3 +1,5 @@
+package Algorithm;
+
 public class tree {
     public static void main(String[] args){
         Node root=new Node();
@@ -26,6 +28,7 @@ public class tree {
         System.out.println();
         backIter(root);
     }
+
     static class Node{
         public int getVal() {
             return val;
@@ -55,23 +58,27 @@ public class tree {
         private Node left;
         private Node right;
     }
+
     private Node root;
 
     public tree(Node root) {
         this.root = root;
     }
+
     public static void preIter(Node root){
         if(root==null) return;
         System.out.print(root.getVal()+" ");
         preIter(root.getLeft());
         preIter(root.getRight());
     }
+
     public static void midIter(Node root){
         if(root==null) return;
         midIter((root.getLeft()));
         System.out.print(root.getVal()+" ");
         midIter(root.getRight());
     }
+
     public static void backIter(Node root){
         if(root==null) return;
         backIter(root.getLeft());

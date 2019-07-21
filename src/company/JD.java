@@ -1,6 +1,6 @@
-import java.util.HashSet;
+package company;
+
 import java.util.Scanner;
-import java.util.Set;
 
 public class JD {
     public static void main(String []args) {
