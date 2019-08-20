@@ -2,7 +2,6 @@ package nowcoder;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class IsSymmetrical {
     boolean isSymmetrical(TreeNode pRoot) {
@@ -11,7 +10,6 @@ public class IsSymmetrical {
         }
         return comRoot(pRoot.left, pRoot.right);
     }
-
     private boolean comRoot(TreeNode left, TreeNode right) {
         // TODO Auto-generated method stub
         if (left == null) return right == null;
