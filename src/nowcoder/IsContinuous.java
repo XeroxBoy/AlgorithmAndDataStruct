@@ -2,7 +2,7 @@ package nowcoder;
 
 import java.util.Arrays;
 
-public class isContinuous {
+public class IsContinuous {
     public static boolean isContinue(int[] numbers) {
         int numOfZero = 0;
         int numOfInterval = 0;

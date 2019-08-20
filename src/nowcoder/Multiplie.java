@@ -1,6 +1,6 @@
 package nowcoder;
 
-public class multiplie {
+public class Multiplie {
     public int[] multiply(int[] A) {
         int[] B = new int[A.length];
         for (int i = 0; i < A.length; i++) B[i] = 1;

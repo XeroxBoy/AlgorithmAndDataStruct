@@ -1,6 +1,6 @@
 package nowcoder;
 
-public class matcher {
+public class Matcher {
     public static boolean match(char[] str,char[] pattern){
         if(str.length==0 && pattern.length==0) return true;
         if(str.length==0){

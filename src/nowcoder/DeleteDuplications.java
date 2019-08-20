@@ -1,6 +1,6 @@
 package nowcoder;
 
-public class deleteDuplications {
+public class DeleteDuplications {
     public static class ListNode {
         int val;
         ListNode next = null;
@@ -65,7 +65,7 @@ public class deleteDuplications {
         p5.next = p6;
         p6.next = p7;
         p7.next = p8;
-        deleteDuplications dD = new deleteDuplications();
+        DeleteDuplications dD = new DeleteDuplications();
         ListNode pHead = dD.deleteDuplication(p1);
         while(pHead!=null){
             System.out.println(pHead.val);

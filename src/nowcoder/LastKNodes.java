@@ -11,7 +11,7 @@ class ListNode {
     }
 }
 
-public class lastKNodes {
+public class LastKNodes {
     public static ListNode FindKthToTail(ListNode head, int k) {
         if (head == null) return null;
         if (k <= 0) return null;

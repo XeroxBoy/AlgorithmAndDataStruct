@@ -1,6 +1,6 @@
 package nowcoder;
 
-public class mirror {
+public class Mirror {
     class TreeNode{
         int val=0;
         TreeNode left=null;

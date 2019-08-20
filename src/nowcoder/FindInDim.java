@@ -2,7 +2,7 @@ package nowcoder;
 
 import jdk.nashorn.internal.runtime.FindProperty;
 
-public class findInDim {
+public class FindInDim {
     public static boolean Find(int target, int[][] array) {
         if (array.length == 0) return false;
         for (int i = 0; i < array.length; i++) {

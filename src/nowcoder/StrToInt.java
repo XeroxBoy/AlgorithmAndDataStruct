@@ -1,6 +1,6 @@
 package nowcoder;
 
-public class strToInt {
+public class StrToInt {
     public static int StrToInt(String str) {
         if (str.equals("0") || str.length() == 0) return 0;
         char[] chars = str.toCharArray();
@@ -21,6 +21,6 @@ public class strToInt {
     }
 
     public static void main(String[] args) {
-        System.out.println(strToInt.StrToInt("1a33"));
+        System.out.println(StrToInt.StrToInt("1a33"));
     }
 }
