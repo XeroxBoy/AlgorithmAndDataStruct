@@ -1,7 +1,5 @@
 package LeetCode.Easy;
 
-import java.util.ArrayList;
-
 public class PlusOne {
     public static void main(String[] args) {
         int[] digits = {9};
