@@ -4,6 +4,16 @@ public class MySqrt {
     public int mySqrt(int x){
         return (int) Math.sqrt(x);
     }
+    public int great2MySqrt(int x) {
+        if(x<2)
+            return x;
+        double t = x;
+        double x0 = x;
+        x0 = x0/2 + t/(2*x0);
+        while(x0*x0 - t > 0.00001)
+            x0 = x0/2 + t/(2*x0);
+        return (int)x0;
+    }
     public int greatMySqrt(int x){
         if(x==0 || x==1) return x;
         int low = 0;
