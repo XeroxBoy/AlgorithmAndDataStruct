@@ -1,4 +1,4 @@
-package LeetCode.Easy.Array;
+package LeetCode.Easy.Bit;
 
 import java.util.HashMap;
 import java.util.Set;
