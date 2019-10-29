@@ -3,18 +3,8 @@ package LeetCode.Easy.DP;
 import java.util.Arrays;
 
 public class Rob {
+
     private int[] memo;
-    public int rob(int[] nums){
-        int[] memo = new int[nums.length];
-        Arrays.fill(memo,0);
-        if(nums.length<=1) return nums.length==0?0:nums[0];
-        memo[0] = nums[0];
-        memo[1] = Math.max(nums[0],nums[1]);
-        for (int i = 2; i < memo.length; i++) {
-            memo[i] = Math.max(memo[i-1],memo[i-2]+nums[i]);
-        }
-        return memo[memo.length-1];
-    }
     /**
      * 方式一：记忆化搜索
      * ① 状态：考虑抢劫 nums[index...num.length） 这个范围内的所有房子
@@ -62,9 +52,22 @@ public class Rob {
         return memo[0];
     }
 
+    /**
+     * 动态规划简化版
+     */
+    public int rob(int[] nums) {
+        int n = nums.length;
+        if (n <= 1) return n == 0 ? 0 : nums[0];
+        int[] memo = new int[n];
+        memo[0] = nums[0];
+        memo[1] = Math.max(nums[0], nums[1]);
+        for (int i = 2; i < n; i++)
+            memo[i] = Math.max(memo[i - 1], nums[i] + memo[i - 2]);
+        return memo[n - 1];
+    }
+
     public static void main(String[] args) {
         int[] nums = {1,2,3,1};
         System.out.println(new Rob().rob(nums));
     }
 }
-
