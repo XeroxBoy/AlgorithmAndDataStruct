@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.IntConsumer;
 
-class ZeroEvenOdd extends Thread {
+class ZeroEvenOdd {
     private int n;
     private volatile int now = 1;
     private Semaphore sZero = new Semaphore(1);
