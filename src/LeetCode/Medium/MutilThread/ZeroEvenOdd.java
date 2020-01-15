@@ -40,7 +40,6 @@ class ZeroEvenOdd {
                 e.printStackTrace();
             }
         }).start();
-
     }
 
     // printNumber.accept(x) outputs "x", where x is an integer.
