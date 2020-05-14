@@ -31,11 +31,11 @@ public class MaxSubArray {
         if (nums.length == 0) return 0;
         int sum = 0;
         int max = nums[0];
-        for (int i = 0; i < nums.length; i++) {
+        for (int num : nums) {
             if (sum > 0)//昨天赢钱 记住他
-                sum += nums[i];
+                sum += num;
             else //昨天亏钱 忘了他
-                sum = nums[i];
+                sum = num;
             max = Math.max(sum, max);
         }
         return max;
