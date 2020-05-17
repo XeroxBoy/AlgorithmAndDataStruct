@@ -35,7 +35,6 @@ public class Trap {
                                 }
                                 nextIndex++;
                             }
-//                            if (k < height.length - 1 && height[k + 1] > height[k]) k++;
                             lastRight = tempMaxIndex;
                             break;
                         }
@@ -58,7 +57,6 @@ public class Trap {
             if (lastLeft < lastRight)
                 i = lastRight - 1;
         }
-//        return Math.abs(capacity);
         return capacity;
     }
 }
