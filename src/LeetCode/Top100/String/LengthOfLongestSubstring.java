@@ -17,13 +17,13 @@ public class LengthOfLongestSubstring {
             char oneChar = s.charAt(i);
             if (set.contains(oneChar)) {
                 int setSize = set.size();
-                maxLen = maxLen > setSize ? maxLen : setSize;
+                maxLen = Math.max(maxLen, setSize);
                 i -= setSize;
                 set = new HashSet<>();
             } else {
                 set.add(oneChar);
                 int setSize = set.size();
-                maxLen = maxLen > setSize ? maxLen : setSize;
+                maxLen = Math.max(maxLen, setSize);
             }
         }
         return maxLen;
