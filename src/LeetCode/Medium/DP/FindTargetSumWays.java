@@ -1,11 +1,14 @@
 package LeetCode.Medium.DP;
 
+import java.util.HashSet;
+
 public class FindTargetSumWays {
     private static int way_num = 0;
 
     public static void main(String[] args) {
         System.out.println(new FindTargetSumWays().findTargetSumWays(new int[]{1, 1, 1, 1, 1}, 3));
         System.out.println(new FindTargetSumWays().findTargetSumWays(new int[]{1}, 1));
+        HashSet set = new HashSet();
     }
 
     public int findTargetSumWays(int[] nums, int S) {

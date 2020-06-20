@@ -27,7 +27,7 @@ public class Graph {
     void DFSTraverse() {
         flag = new boolean[number];
         for (int i = 0; i < number; i++) {
-            if (flag[i] == false) {// 当前顶点没有被访问
+            if (!flag[i]) {// 当前顶点没有被访问
                 DFS(i);
             }
         }
@@ -38,7 +38,7 @@ public class Graph {
         flag[i] = true;// 第i个顶点被访问
         System.out.print(vertexs[i] + " ");
         for (int j = 0; j < number; j++) {
-            if (flag[j] == false && edges[i][j] == 1) {
+            if (!flag[j] && edges[i][j] == 1) {
                 DFS(j);
             }
         }
@@ -50,14 +50,14 @@ public class Graph {
         Queue<Integer> queue
                 =new LinkedList<Integer>();
         for (int i = 0; i < number; i++) {
-            if (flag[i] == false) {
+            if (!flag[i]) {
                 flag[i] = true;
                 System.out.print(vertexs[i] + " ");
                 queue.add(i);
                 while (!queue.isEmpty()) {
                     int j = queue.poll();
                     for (int k = 0; k < number; k++) {
-                        if (edges[j][k] == 1 && flag[k] == false) {
+                        if (edges[j][k] == 1 && !flag[k]) {
                             flag[k] = true;
                             System.out.print(vertexs[k] + " ");
                             queue.add(k);

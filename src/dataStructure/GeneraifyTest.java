@@ -9,8 +9,8 @@ public class GeneraifyTest {
         List<Integer> list = new ArrayList<>();
         int[] sbs = new int[5];
         Integer[] isbs = new Integer[list.size()];
-        for (int i = 0; i < sbs.length; i++) {
-            list.add(sbs[i]);
+        for (int value : sbs) {
+            list.add(value);
         }
 //        list.toArray();
 //        Object[] asb = list.toArray(new Object[sbs.length]);

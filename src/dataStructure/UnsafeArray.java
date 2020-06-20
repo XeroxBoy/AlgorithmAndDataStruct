@@ -19,5 +19,6 @@ public class UnsafeArray {
         }).start();
         Thread.sleep(5000);
         System.out.println(list);
+        System.out.println(list.size());
     }
 }
