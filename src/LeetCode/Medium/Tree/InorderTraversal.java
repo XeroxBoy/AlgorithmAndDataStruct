@@ -26,12 +26,15 @@ public class InorderTraversal {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode curr = root;
         while (curr != null || !stack.empty()) {
+            //curr左子树
             while (curr != null) {
                 stack.push(curr);
                 curr = curr.left;
             }
+            //访问curr
             curr = stack.pop();
             resultList.add(curr.val);
+            //右字数
             curr = curr.right;
         }
         return resultList;
