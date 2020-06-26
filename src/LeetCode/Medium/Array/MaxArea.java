@@ -26,10 +26,10 @@ public class MaxArea {
         int maxArea = 0;
 
         while (left < right) {
-            int area = (right - left) * ((height[left] > height[right]) ? height[right] : height[left]);
-            maxArea = area > maxArea ? area : maxArea;
+            int area = (right - left) * (Math.min(height[left], height[right]));
+            maxArea = Math.max(area, maxArea);
             if (height[left] < height[right]) {
-                left++;
+                left++; //改变left 而不是为了递增
             } else if (height[left] > height[right]) {
                 right--;
             } else {
