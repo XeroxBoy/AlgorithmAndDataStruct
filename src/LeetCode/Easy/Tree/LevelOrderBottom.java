@@ -78,9 +78,9 @@ public class LevelOrderBottom {
     }
 
     public List<List<Integer>> greatLevelOrderBottom(TreeNode root) {
-        LinkedList<List<Integer>> result = new LinkedList<>();
         if (root == null)
-            return result;
+            return new LinkedList<>();
+        LinkedList<List<Integer>> result = new LinkedList<>();
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {

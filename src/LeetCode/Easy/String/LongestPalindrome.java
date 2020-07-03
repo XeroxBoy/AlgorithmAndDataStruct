@@ -1,4 +1,4 @@
-package LeetCode.Easy.Tree;
+package LeetCode.Easy.String;
 
 import java.util.*;
 import java.util.stream.Collectors;
