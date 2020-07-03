@@ -22,7 +22,6 @@ public class BuildTree {
         TreeNode root = new TreeNode(preorder[preOrderStartIndex]);
         int rootMidIndex = map.get(preorder[preOrderStartIndex]);
         int leftNum = rootMidIndex - startMidIndex;
-        int rightNum = endMidIndex - rootMidIndex;
         root.left = buildTreeFromRoot(preorder, inorder, preOrderStartIndex + 1, preOrderStartIndex +
                 leftNum, startMidIndex, rootMidIndex - 1);
         root.right = buildTreeFromRoot(preorder, inorder, preOrderStartIndex + leftNum + 1, preOrderEndIndex
