@@ -77,7 +77,7 @@ public class RBTree<T extends Comparable<T>> {
      * @return
      */
     public T addNode(T value) {
-        RBTreeNode<T> t = new RBTreeNode<T>(value);
+        RBTreeNode<T> t = new RBTreeNode<>(value);
         return addNode(t);
     }
 

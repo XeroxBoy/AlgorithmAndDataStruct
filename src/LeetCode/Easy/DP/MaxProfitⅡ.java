@@ -7,20 +7,37 @@ public class MaxProfitⅡ {
     }
 
     public int maxProfit(int[] prices) {
-        int maxProfit = 0;
-        for (int i = 0; i < prices.length - 1; i++) {
-            int firstNum = prices[i];
-            int j = i + 1;
-            boolean flag = false;
-            while (j < prices.length && prices[j] > prices[i]) {
-                j++;
-                i++;
-                flag = true;
-            }
-            if (flag) {
-                maxProfit += prices[i] - firstNum;
+        int result = 0;
+        if (prices.length < 2) {
+            return result;
+        }
+
+        // 只要后项大于前项，则累加到结果中。
+        // 想象连续两次涨，就累加了两次的差值，其实就等于 第三次卖 - 第一次买的差值
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] > prices[i - 1]) {
+                result += (prices[i] - prices[i - 1]);
             }
         }
-        return maxProfit;
+        return result;
     }
+
+    class Solution {
+        public int maxProfit(int[] prices) {
+            int result = 0;
+            if (prices.length < 2) {
+                return result;
+            }
+
+            // 只要后项大于前项，则累加到结果中。
+            // 想象连续两次涨，就累加了两次的差值，其实就等于 第三次卖 - 第一次买的差值
+            for (int i = 1; i < prices.length; i++) {
+                if (prices[i] > prices[i - 1]) {
+                    result += (prices[i] - prices[i - 1]);
+                }
+            }
+            return result;
+        }
+    }
+
 }
