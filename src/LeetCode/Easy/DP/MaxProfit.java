@@ -5,7 +5,9 @@ public class MaxProfit {
         int[] prices = {7, 1, 5, 3, 6, 4};
         int[] prices1 = {7, 6, 4, 3, 1};
         System.out.println(new MaxProfit().maxProfit(prices));
+        System.out.println(new MaxProfit().maxProfit(prices1));
         System.out.println(new MaxProfit().other_maxProfit(prices));
+        System.out.println(new MaxProfit().other_maxProfit(prices1));
     }
 
     public int maxProfit(int[] prices) {
