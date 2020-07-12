@@ -7,15 +7,18 @@ public class NQueen {
     private static List<List<String>> reasonableResults;
 
     public static void main(String[] args) {
-        reasonableResults = new NQueen().solveNQueens(4);
+        System.out.println(System.currentTimeMillis());
+        reasonableResults = new NQueen().solveNQueens(50);
 //        reasonableResults = new NQueen().new Solution().solveNQueens(4);
         for (int i = 0; i < reasonableResults.size(); i++) {
             List<String> result = reasonableResults.get(i);
             for (int j = 0; j < result.size(); j++) {
                 System.out.println(result.get(j));
             }
+            System.out.println();
         }
         System.out.println(reasonableResults.size());
+        System.out.println(System.currentTimeMillis());
     }
 
     public List<List<String>> solveNQueens(int n) {
