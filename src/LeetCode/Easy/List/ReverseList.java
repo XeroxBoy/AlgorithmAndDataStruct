@@ -21,6 +21,15 @@ public class ReverseList {
         }
     }
 
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode p = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return p;
+    }
+
+
     public ListNode reverseList1(ListNode head) {
         Stack<ListNode> stack = new Stack<>();
         while (head != null) {

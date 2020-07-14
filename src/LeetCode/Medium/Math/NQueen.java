@@ -8,7 +8,7 @@ public class NQueen {
 
     public static void main(String[] args) {
         System.out.println(System.currentTimeMillis());
-        reasonableResults = new NQueen().solveNQueens(50);
+        reasonableResults = new NQueen().solveNQueens(20);
 //        reasonableResults = new NQueen().new Solution().solveNQueens(4);
         for (int i = 0; i < reasonableResults.size(); i++) {
             List<String> result = reasonableResults.get(i);
