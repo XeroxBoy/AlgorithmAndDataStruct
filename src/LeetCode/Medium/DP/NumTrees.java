@@ -1,4 +1,4 @@
-package LeetCode.Medium.Tree;
+package LeetCode.Medium.DP;
 
 public class NumTrees {
     public static void main(String[] args) {
