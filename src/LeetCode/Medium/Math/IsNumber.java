@@ -24,6 +24,23 @@ public class IsNumber {
         System.out.println(new IsNumber().isNumber("G76  "));
     }
 
+    /*
+    * 按照字符串从左到右的顺序，定义以下 9 种状态。
+
+    开始的空格
+    幂符号前的正负号
+    小数点前的数字
+    小数点、小数点后的数字
+    当小数点前为空格时，小数点、小数点后的数字
+    幂符号
+    幂符号后的正负号
+    幂符号后的数字
+    结尾的空格
+    结束状态：
+
+    合法的结束状态有 2, 3, 7, 8 。
+
+    * */
     public boolean isNumber(String s) {
         Map[] states = {
                 new HashMap<Character, Integer>() {{
