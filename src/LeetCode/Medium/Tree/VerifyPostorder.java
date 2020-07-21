@@ -16,7 +16,7 @@ public class VerifyPostorder {
                 break;
             }
         }
-        int p = 0;
+        int p = -1;
         for (int k = divider; k <= j; k++) {
             if (postorder[k] <= last) {
                 p = k;

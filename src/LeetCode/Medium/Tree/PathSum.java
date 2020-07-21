@@ -8,7 +8,7 @@ import java.util.List;
 
 public class PathSum {
     private static List<List<Integer>> sumList;
-    private static LinkedList<Integer> list = new LinkedList<>();
+    private static final LinkedList<Integer> list = new LinkedList<>();
 
     public static void main(String[] args) {
         TreeNode n1 = new TreeNode(-2);
