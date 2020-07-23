@@ -34,15 +34,16 @@ public class MedianFinder {
 
     public void addNum(int num) {
         if (max_queue.size() != min_queue.size()) {
-            min_queue.add(num);
-            max_queue.add(min_queue.poll());
-        } else {
             max_queue.add(num);
             min_queue.add(max_queue.poll());
+
+        } else {
+            min_queue.add(num);
+            max_queue.add(min_queue.poll());
         }
     }
 
     public double findMedian() {
-        return max_queue.size() == min_queue.size() ? (max_queue.peek() + min_queue.peek()) / 2.0 : min_queue.peek();
+        return max_queue.size() == min_queue.size() ? (max_queue.peek() + min_queue.peek()) / 2.0 : max_queue.peek();
     }
 }
