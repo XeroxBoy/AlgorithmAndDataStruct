@@ -1,7 +1,6 @@
 package LeetCode.Medium.List;
 
 import dataStructure.Node;
-import exception.A;
 
 import java.util.ArrayList;
 import java.util.HashMap;

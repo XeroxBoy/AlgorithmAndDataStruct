@@ -1,7 +1,5 @@
 package LeetCode.Easy.Trick;
 
-import exception.A;
-
 import java.util.ArrayList;
 
 public class LastRemaining {
