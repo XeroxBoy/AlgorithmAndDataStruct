@@ -13,13 +13,7 @@ public class SelectZhangJie {
         int size = score.size();
         List<Map.Entry<String, Double>> list = new ArrayList<Map.Entry<String, Double>>(size);
         list.addAll(score.entrySet());
-        Collections.sort(list, new Comparator<Map.Entry<String, Double>>() {
-            public int compare(Map.Entry<String, Double> o1, Map.Entry<String, Double> o2) {
-                return o1.getValue().compareTo(o2.getValue());
-            }
-
-            ;
-        });
+        Collections.sort(list, Map.Entry.comparingByValue());
         for (Map.Entry<String, Double> entry : list) {
             // 得到排序后的键值
             System.out.println(entry.getKey());
