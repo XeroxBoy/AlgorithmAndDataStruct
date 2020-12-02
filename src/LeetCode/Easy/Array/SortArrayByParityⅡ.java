@@ -4,8 +4,9 @@ import java.util.Arrays;
 
 public class SortArrayByParityⅡ {
     public static void main(String[] args) {
-        int[] arr = new int[]{4, 2, 5, 7};
-        Arrays.stream(new SortArrayByParityⅡ().sortArrayByParityII(arr)).forEach(System.out::println);
+        System.out.println(new Long(181 / 60).equals((long) (190 / 60)));
+//        int[] arr = new int[]{4, 2, 5, 7};
+//        Arrays.stream(new SortArrayByParityⅡ().sortArrayByParityII(arr)).forEach(System.out::println);
     }
 
     public int[] sortArrayByParityII(int[] A) {
